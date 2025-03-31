@@ -1,0 +1,5 @@
+services:
+  quad_tester:
+    image: alexfives/quad_tester:level_${TEST_LEVEL}_latest
+    volumes:
+      - ./source:/source
