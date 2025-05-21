@@ -30,6 +30,12 @@ cp .env.example .env
 docker compose up --build
 ```
 
+Если образ обновился, то нужно очистить кэш перед запуском:
+
+```bash
+docker rmi -f alexfives/quad_tester:level_1_latest alexfives/quad_tester:level_2_latest alexfives/quad_tester:level_3_latest
+```
+
 # Как работает тестовая система
 
 При запуске контейнера сначала с помощью cmake собирается проект. Далее для собранного приложения запускаются тесты.
